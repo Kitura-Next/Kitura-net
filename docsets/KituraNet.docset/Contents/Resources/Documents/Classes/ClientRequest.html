@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ClientRequest Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/ClientRequest" class="dashAnchor"></a>
+
+    <a title="ClientRequest Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          KituraNet Docs
+        </a>
+         (98% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">KituraNet Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      ClientRequest Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BufferList.html">BufferList</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ClientRequest.html">ClientRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ClientRequest/Options.html">– Options</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ClientResponse.html">ClientResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FastCGI.html">FastCGI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FastCGIServer.html">FastCGIServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FastCGIServerRequest.html">FastCGIServerRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FastCGIServerRequest/FastCGIParserErrorType.html">– FastCGIParserErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FastCGIServerResponse.html">FastCGIServerResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTP.html">HTTP</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPServer.html">HTTPServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPServerRequest.html">HTTPServerRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HTTPServerResponse.html">HTTPServerResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/HeadersContainer.html">HeadersContainer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/IncomingHTTPSocketProcessor.html">IncomingHTTPSocketProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/IncomingSocketHandler.html">IncomingSocketHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/IncomingSocketManager.html">IncomingSocketManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ListenerGroup.html">ListenerGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SPIUtils.html">SPIUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLParser.html">URLParser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPStatusCode.html">HTTPStatusCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HTTPStatusCode/Class.html">– Class</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/KeepAliveState.html">KeepAliveState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ServerState.html">ServerState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ConnectionUpgradeFactory.html">ConnectionUpgradeFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/IncomingSocketProcessor.html">IncomingSocketProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/IncomingSocketProcessorCreator.html">IncomingSocketProcessorCreator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Server.html">Server</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ServerDelegate.html">ServerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ServerMonitor.html">ServerMonitor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ServerRequest.html">ServerRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ServerResponse.html">ServerResponse</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ConnectionUpgrader.html">ConnectionUpgrader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/Monitor.html">Monitor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ServerOptions.html">ServerOptions</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>ClientRequest</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ClientRequest</span></code></pre>
+
+                </div>
+              </div>
+            <p>This class provides a set of low level APIs for issuing HTTP requests to another server. A new instance of the request can be created, along with options if the user would like to specify certain parameters such as HTTP headers, HTTP methods, host names, and SSL credentials. <code>Data</code> and <code>String</code> objects can be added to a <code>ClientRequest</code> too, and URLs can be parsed.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="c1">//Function to create a new `ClientRequest` using a URL.</span>
+ <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ClientRequest</span><span class="o">.</span><span class="kt">Callback</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ClientRequest</span> <span class="p">{</span>
+     <span class="k">return</span> <span class="kt">ClientRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="n">callback</span><span class="p">)</span>
+ <span class="p">}</span>
+
+ <span class="c1">//Create a new `ClientRequest` using a URL.</span>
+ <span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">HTTP</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"http://localhost/8080"</span><span class="p">)</span> <span class="p">{</span><span class="n">response</span> <span class="k">in</span>
+     <span class="o">...</span>
+ <span class="p">}</span>
+</code></pre>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC7headersSDyS2SGvp"></a>
+                    <a name="//apple_ref/swift/Property/headers" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC7headersSDyS2SGvp">headers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The set of HTTP headers to be sent with the request.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="n">clientRequest</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">"Content-Type"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"text/plain"</span><span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC3urlSSvp"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC3urlSSvp">url</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL for the request.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="n">clientRequest</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="s">"https://localhost:8080"</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC6methodSSvp"></a>
+                    <a name="//apple_ref/swift/Property/method" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC6methodSSvp">method</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The HTTP method (i.e. GET, POST, PUT, DELETE) for the request.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="n">clientRequest</span><span class="o">.</span><span class="n">method</span> <span class="o">=</span> <span class="s">"post"</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC8userNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/userName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC8userNameSSSgvp">userName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The username to be used if using Basic Auth authentication.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="n">clientRequest</span><span class="o">.</span><span class="n">userName</span> <span class="o">=</span> <span class="s">"user1"</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">userName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC8passwordSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/password" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC8passwordSSSgvp">password</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The password to be used if using Basic Auth authentication.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="n">clientRequest</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="s">"sUpeR_seCurE_paSsw0rd"</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC12maxRedirectsSivp"></a>
+                    <a name="//apple_ref/swift/Property/maxRedirects" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC12maxRedirectsSivp">maxRedirects</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum number of redirects before failure.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The <code>ClientRequest</code> class will automatically follow redirect responses. To avoid redirect loops, it will at maximum follow <code>maxRedirects</code> redirects.
+
+</div>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="n">clientRequest</span><span class="o">.</span><span class="n">maxRedirects</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">maxRedirects</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC15closeConnectionSbvp"></a>
+                    <a name="//apple_ref/swift/Property/closeConnection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC15closeConnectionSbvp">closeConnection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If true, the &ldquo;Connection: close&rdquo; header will be added to the request that is sent.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="kt">ClientRequest</span><span class="o">.</span><span class="n">closeConnection</span> <span class="o">=</span> <span class="kc">false</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">closeConnection</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC7OptionsO"></a>
+                    <a name="//apple_ref/swift/Enum/Options" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC7OptionsO">Options</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Client request options enum. This allows the client to specify certain parameteres such as HTTP headers, HTTP methods, host names, and SSL credentials.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="c1">//If present in the options provided, the client will try to use HTTP/2 protocol for the connection.</span>
+<span class="kt">Options</span><span class="o">.</span><span class="n">useHTTP2</span>
+</code></pre>
+
+                        <a href="../Classes/ClientRequest/Options.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Options</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC8Callbacka"></a>
+                    <a name="//apple_ref/swift/Alias/Callback" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC8Callbacka">Callback</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Response callback closure type.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ClientRequest</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">"Content-Type"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"text/plain"</span><span class="p">]</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Callback</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/ClientResponse.html">ClientResponse</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ClientResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Classes/ClientResponse.html">ClientResponse</a></code> object that describes the response that was received from the remote server.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC3setyyAC7OptionsOF"></a>
+                    <a name="//apple_ref/swift/Method/set(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC3setyyAC7OptionsOF">set(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set a single option in the request. URL parameters must be set in init().</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">ClientRequest</span><span class="o">.</span><span class="kt">Options</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">options</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="o">.</span><span class="nf">port</span><span class="p">(</span><span class="kt">Int16</span><span class="p">(</span><span class="n">port</span><span class="p">)))</span>
+<span class="n">clientRequest</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">set</span><span class="p">(</span><span class="n">_</span> <span class="nv">option</span><span class="p">:</span> <span class="kt"><a href="../Classes/ClientRequest/Options.html">Options</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>option</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code><a href="../Classes/ClientRequest/Options.html">Options</a></code> instance describing the change to be made to the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC5parseySayAC7OptionsOGSSFZ"></a>
+                    <a name="//apple_ref/swift/Method/parse(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC5parseySayAC7OptionsOGSSFZ">parse(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parse an URL (String) into an array of ClientRequest.Options.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"http://www.website.com"</span>
+<span class="k">let</span> <span class="nv">parsedOptions</span> <span class="o">=</span> <span class="n">clientRequest</span><span class="o">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">parse</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">ClientRequest</span><span class="o">.</span><span class="kt"><a href="../Classes/ClientRequest/Options.html">Options</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A String object referencing a URL.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of <code><a href="../Classes/ClientRequest/Options.html">ClientRequest.Options</a></code></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC5parseySayAC7OptionsOG10Foundation3URLVFZ"></a>
+                    <a name="//apple_ref/swift/Method/parse(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC5parseySayAC7OptionsOG10Foundation3URLVFZ">parse(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parse an URL Foudation object into an array of ClientRequest.Options.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://www.website.com"</span><span class="p">)</span><span class="o">!</span>
+<span class="k">let</span> <span class="nv">parsedOptions</span> <span class="o">=</span> <span class="n">clientRequest</span><span class="o">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">parse</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">ClientRequest</span><span class="o">.</span><span class="kt"><a href="../Classes/ClientRequest/Options.html">Options</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Foundation URL object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of <code><a href="../Classes/ClientRequest/Options.html">ClientRequest.Options</a></code></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC5write4fromySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/write(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC5write4fromySS_tF">write(from:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add a String to the body of the request to be sent.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">stringToSend</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"send something"</span>
+<span class="n">clientRequest</span><span class="o">.</span><span class="nf">write</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">stringToSend</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">from</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The String to be added to the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC5write4fromy10Foundation4DataV_tF"></a>
+                    <a name="//apple_ref/swift/Method/write(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC5write4fromy10Foundation4DataV_tF">write(from:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add the bytes in a Data struct to the body of the request to be sent.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="s">"some some more stuff"</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">clientRequest</span><span class="o">.</span><span class="nf">write</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+<span class="p">}</span>
+
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">from</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>from</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Data Struct containing the bytes to be added to the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC3end_5closeySS_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/end(_:close:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC3end_5closeySS_SbtF">end(_:<wbr>close:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add a String to the body of the request to be sent and then send the request to the remote server.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"send something"</span>
+<span class="n">clientRequest</span><span class="o">.</span><span class="nf">end</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">close</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">end</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">close</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The String to be added to the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>close</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If true, add the &ldquo;Connection: close&rdquo; header to the set of headers sent with the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC3end_5closey10Foundation4DataV_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/end(_:close:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC3end_5closey10Foundation4DataV_SbtF">end(_:<wbr>close:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add the bytes in a Data struct to the body of the request to be sent and then send the request to the remote server.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">stringToSend</span> <span class="o">=</span> <span class="s">"send this"</span>
+<span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="n">stringToSend</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">{</span>
+   <span class="n">clientRequest</span><span class="o">.</span><span class="nf">end</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">close</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">end</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">close</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The Data struct containing the bytes to be added to the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>close</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If true, add the &ldquo;Connection: close&rdquo; header to the set of headers sent with the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9KituraNet13ClientRequestC3end5closeySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/end(close:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9KituraNet13ClientRequestC3end5closeySb_tF">end(close:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send the request to the remote server.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="n">clientRequest</span><span class="o">.</span><span class="nf">end</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">end</span><span class="p">(</span><span class="nv">close</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>close</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If true, add the &ldquo;Connection: close&rdquo; header to the set of headers sent with the request.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-12-09)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
